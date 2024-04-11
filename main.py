@@ -1,7 +1,9 @@
+import sys
+
+import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
-import matplotlib.pyplot as plt
-import sys
+
 np.set_printoptions(threshold=sys.maxsize)
 
 image_clear = Image.open("./test.jpg")
@@ -24,16 +26,16 @@ for i in range(0, 256):
 for row in clear_array_red:
     for value in row:
         frequency_red[str(value)] += 1
-        
+
 for row in clear_array_green:
     for value in row:
         frequency_green[str(value)] += 1
-        
+
 
 for row in clear_array_blue:
     for value in row:
         frequency_blue[str(value)] += 1
-        
+
 data_red = list(frequency_red.keys())
 bars_red = list(frequency_red.values())
 
